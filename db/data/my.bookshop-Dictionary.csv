@@ -1,0 +1,11 @@
+ID,dicname,description,rating
+101,CustomerInfo,"Contains information about customers including name, address, and contact details.",4.5
+102,ProductCatalog,"Stores details about various products including name, category, and price.",4.8
+103,EmployeeData,"Holds data related to employees such as employee ID, name, department, and position.",4.7
+104,OrderHistory,"Records the history of orders made by customers including order ID, items purchased, and total amount.",4.6
+105,InventoryManagement,"Manages the inventory of products including stock levels, suppliers, and reorder points.",4.4
+106,SalesPerformance,"Tracks sales performance metrics such as revenue, profit, and sales growth over time.",4.9
+107,TransactionLog,"Logs all transactions made within the system including timestamp, user ID, and action performed.",4.3
+108,FinancialReports,"Generates financial reports including balance sheets, income statements, and cash flow statements.",4.7
+109,ShippingLogistics,"Handles logistics related to shipping such as delivery schedules, shipping methods, and tracking information.",4.5
+110,FeedbackManagement,"Manages customer feedback including ratings, comments, and suggestions for improvement.",4.6

@@ -1,0 +1,58 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "express": "^4",
+    "@sap/cds-hana": "^2"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.8"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-books": "cds watch --open books/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "[devlopment]": {
+          "kind": "sqlite"
+        },
+        "[production]": {
+          "kind": "hana"
+        }
+      },
+      "[production]": {
+        "auth": "xsuaa"
+      },
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "admin@sap.com": {
+              "password": "Initial",
+              "ID": "admin@sap.com",
+              "roles": [
+                "Admin"
+              ]
+            },
+            "user@sap.com": {
+              "password": "Initial",
+              "ID": "user@sap.com",
+              "roles": [
+                "User"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

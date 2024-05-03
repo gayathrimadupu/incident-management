@@ -1,0 +1,11 @@
+ID,Title,Stock,Author,Genre,Publication_Year,Price,Language,Dict_ID,stmarks_ID
+1, daea, 3, maxmus, hdy, 6099, 89.90, english,101,1
+2, xyz, 5, jane_doe, fiction, 2022, 45.50, english,102,2
+3, abc, 8, john_smith, mystery, 2023, 32.75, spanish,103,3
+4, book1, 12, author1, fantasy, 2021, 28.99, german,104,4
+5, book2, 20, author2, romance, 2024, 19.95, french,105,5
+6, book3, 15, author3, science_fiction, 2020, 50.00, italian,106,6
+7, book4, 7, author4, thriller, 2023, 42.80, portuguese,107,7
+8, book5, 18, author5, historical_fiction, 2019, 37.25, dutch,108,8
+9, book6, 10, author6, adventure, 2022, 65.50, swedish,109,9
+10, book7, 25, author7, biography, 2025, 23.75, russian,110,10

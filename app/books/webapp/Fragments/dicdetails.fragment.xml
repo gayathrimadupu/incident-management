@@ -1,0 +1,40 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+<form:SimpleForm
+        id="idDicDetailsForm"
+        editable="false"
+        layout="ColumnLayout"
+        columnsM="2"
+        columnsL="3"
+        columnsXL="4"
+        binding="{Dict}"
+    >
+        <Label
+            id="idforlabel"
+            text="Dictname"
+        />
+        <Text
+            id="idfortext"
+            text="{dicname}"
+        />
+        <Label
+            
+            text="description"
+        />
+        <Text
+        
+            text="{description}"
+        />
+         <Label
+            
+            text="rating"
+        />
+        <Text
+        
+            text="{rating}"
+        /> 
+    </form:SimpleForm>
+</core:FragmentDefinition>
