@@ -2,17 +2,22 @@
   "name": "books",
   "version": "1.0.0",
   "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "repository": {
+    "type": "git",
+    "url": "<Add your repository here>"
+  },
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
+    "@sap/cds-hana": "^2.0.0",
     "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
-    "express": "^4",
-    "@sap/cds-hana": "^2"
+    "@sap/xssec": "^3.6.1",
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7.9.1",
     "@sap/ux-specification": "^1.120.8"
   },
   "scripts": {
@@ -54,5 +59,7 @@
         }
       }
     }
-  }
+  },
+  "main": "index.js",
+  "author": "gayathri"
 }
