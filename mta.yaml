@@ -3,14 +3,12 @@ ID: books
 version: 1.0.0
 description: "A simple CAP project."
 parameters:
-  applicationName: books
   enable-parallel-deployments: true
 build-parameters:
   before-all:
     - builder: custom
       commands:
         - npm ci
-        - npm install --production 
         - npx cds build --production
 modules:
   - name: books-srv

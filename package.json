@@ -9,10 +9,10 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^7",
-    "@sap/cds-hana": "^2.0.0",
+    "@sap/cds": "^7.9.0",
+    "@sap/cds-hana": "^2",
     "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
-    "@sap/xssec": "^3.6.1",
+    "@sap/xssec": "^3",
     "express": "^4"
   },
   "devDependencies": {
@@ -57,7 +57,8 @@
             }
           }
         }
-      }
+      },
+      "auth": "xsuaa"
     }
   },
   "main": "index.js",
