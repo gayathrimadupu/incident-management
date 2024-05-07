@@ -18,7 +18,7 @@ entity Dictionary {
   key ID          : Integer;
       dicname     : String;
       description : String;
-      rating      : Integer;
+      rating      : Decimal;
 
 }
 
