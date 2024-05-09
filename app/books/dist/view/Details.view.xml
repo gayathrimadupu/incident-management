@@ -1,0 +1,121 @@
+<mvc:View
+    xmlns:layout="sap.ui.layout"
+    xmlns:uxap="sap.uxap"
+    xmlns:form="sap.ui.layout.form"
+    controllerName="com.app.books.controller.Details"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+>
+    <uxap:ObjectPageLayout id="_IDGenObjectPageLayout1">
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle
+                id="_IDGenObjectPageDynamicHeaderTitle1"
+            >
+                <uxap:expandedHeading>
+                    <Title
+                        id="_IDGenTitle1"
+                        text="{author}"
+                    />
+                </uxap:expandedHeading>
+                <uxap:actions>
+                    <Button
+                        id="idBtnDelete"
+                        icon="sap-icon://delete"
+                        tooltip="Delete Books"
+                        type="Negative"
+                        press="onDeleteBooks"
+                    />
+                </uxap:actions>
+                <uxap:actions>
+                    <Button
+                        id="_IDGenButton1"
+                        text="Edit"
+                        type="Emphasized"
+                        press="onEdit"
+                    />
+                    <Button
+                        id="_IDGenButton2"
+                        type="Transparent"
+                        text="Delete"
+                    />
+                    <Button
+                        id="_IDGenButton3"
+                        type="Transparent"
+                        text="Copy"
+                    />
+                    <OverflowToolbarButton
+                        id="_IDGenOverflowToolbarButton1"
+                        icon="sap-icon://action"
+                        type="Transparent"
+                        text="Share"
+                        tooltip="action"
+                    />
+                </uxap:actions>
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+
+        <uxap:sections>
+            <uxap:ObjectPageSection
+                titleUppercase="true"
+                title="Book details"
+            >
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <uxap:blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="com.app.books.Fragments.bookinfo"
+                            />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection title="Dictionary details">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <uxap:blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="com.app.books.Fragments.dicdetails"
+                            />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection
+                titleUppercase="true"
+                title="student details"
+            >
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <uxap:blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="com.app.books.Fragments.studdetails"
+                            />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>
+<!-- <Text
+        id="_IDGenText1"
+        text="Form Page"
+    />
+    <form:SimpleForm id="idbooksDetailsForm">
+        <Label id="_IDGenLabel1" text="author" />
+        <Text id="_IDGenText2" text="{author}" />
+        <Label id="_IDGenLabel2" text="title" />
+        <Text id="_IDGenText3" text="{title}" />
+
+        <Label id="_IDGenLabel3" text = "dictionaryname" />
+        <Text id="_IDGenText4" text = "{Dict/dicname}"/>
+        <Label id="_IDGenLabel4" text = "Description" />
+        <Text id="_IDGenText5" text = "{Dict/description}"/> -->
+<!-- </form:SimpleForm> -->

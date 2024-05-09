@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <form:SimpleForm
+        id="idstudentDetailsForm"
+        editable="false"
+        layout="ColumnLayout"
+        columnsM="2"
+        columnsL="3"
+        columnsXL="4"
+        binding="{stmarks}"
+    >
+        
+        <Label
+            
+            text="studentname"
+        />
+        <Text
+        
+            text="{stname}"
+        />
+         <Label
+            
+            text="studentdetails"
+        />
+        <Text
+        
+            text="{stdetails}"
+        /> 
+        <Label
+            
+            text="studentmarks"
+        />
+        <Text
+        
+            text="{st_marks}"
+        /> 
+    </form:SimpleForm>
+</core:FragmentDefinition>

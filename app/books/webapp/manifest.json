@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
-      "version": "1.13.2",
-      "toolsId": "6d69d212-c786-49a8-b92c-1ba7f4857e20"
+      "version": "1.13.3",
+      "toolsId": "d8c60d9f-924a-4ff5-8488-55418d6866ab"
     },
     "dataSources": {
       "mainService": {
@@ -22,27 +22,6 @@
         "settings": {
           "annotations": [],
           "odataVersion": "4.0"
-        }
-      } ,
-      "mainServiceV2": {
-        "uri": "/v2/odata/v4/catalog/",
-        "type": "OData",
-        "settings": {
-          "annotations": [],
-          "odataVersion": "2.0"
-        }
-      }    
-    },
-    "crossNavigation": {
-      "inbounds": {
-        "books-display": {
-          "semanticObject": "details",
-          "action": "display",
-          "title": "{{flpTitle}}",
-          "signature": {
-            "parameters": {},
-            "additionalParameters": "allowed"
-          }
         }
       }
     }
@@ -98,17 +77,7 @@
           "autoExpandSelect": true,
           "earlyRequests": true
         }
-      } ,
-      "ModelV2": {
-        "dataSource": "mainServiceV2",
-        "preload": true,
-        "settings": {
-          "synchronizationMode": "None",
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true
-        }
-      }  
+      }
     },
     "resources": {
       "css": [
@@ -130,16 +99,9 @@
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": "",
+          "pattern": ":?query:",
           "target": [
             "TargetView1"
-          ]
-        },
-        {
-          "name": "RouteDetails",
-          "pattern":"Books/{bookID}/:author:",
-          "target": [
-            "TargetDetails"
           ]
         }
       ],
@@ -150,13 +112,6 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
-        },
-        "TargetDetails": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "Details",
-          "viewName":"Details"
         }
       }
     },
