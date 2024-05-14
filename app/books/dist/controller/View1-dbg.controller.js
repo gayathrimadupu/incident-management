@@ -115,6 +115,7 @@
                 sGenreFilterLabel = oView.byId("idPhoneFilterValue").destroyTokens();
                 },
                 onSelectBooks: function (oEvent) {
+                    debugger;
                     const { ID, author, dicname, stname } = oEvent.getSource().getSelectedItem().getBindingContext().getObject();
                     const oRouter = this.getRouter();
                     oRouter.navTo("RouteDetails", {

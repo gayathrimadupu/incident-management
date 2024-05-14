@@ -23,6 +23,27 @@
                     "annotations": [],
                     "odataVersion": "4.0"
                 }
+            },
+            "mainServiceV2": {
+                "uri": "v2/odata/v4/catalog/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "odataVersion": "2.0"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "Books-Display": {
+                    "semanticObject": "Books",
+                    "action": "Display",
+                    "title": "{{flpTitle}}",
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    }
+                }
             }
         }
     },
@@ -77,6 +98,16 @@
                     "autoExpandSelect": true,
                     "earlyRequests": true
                 }
+            },
+            "ModelV2": {
+                "dataSource": "mainServiceV2",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
             }
         },
         "resources": {
@@ -99,9 +130,16 @@
             "routes": [
                 {
                     "name": "RouteView1",
-                    "pattern": ":?query:",
+                    "pattern": "",
                     "target": [
                         "TargetView1"
+                    ]
+                },
+                {
+                    "name": "RouteDetails",
+                    "pattern": "Books/{bookID}/",
+                    "target": [
+                        "TargetDetails"
                     ]
                 }
             ],
@@ -112,6 +150,12 @@
                     "clearControlAggregation": false,
                     "viewId": "View1",
                     "viewName": "View1"
+                },
+                "TargetDetails": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "Details",
+                    "viewName": "Details"
                 }
             }
         },
@@ -121,5 +165,9 @@
             "async": true,
             "id": "App"
         }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "books"
     }
 }
